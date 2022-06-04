@@ -1,0 +1,136 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Wallpoet&display=swap');
+
+
+    $blugrn-drk:#048fa1;
+    $blugrn-lgt:#97dbe4;
+    $blugrn:#2cbdc2;
+    $text:#9ae7f1;
+    
+body {
+    background-image:linear-gradient($blugrn-drk,$text);
+    box-sizing: border-box;
+}
+a:visited,
+a:link {
+    color:#fff;
+}
+.container-lg {
+    padding:3rem 5rem;
+    font-family: 'Montserrat','san-serif';
+    header {
+        color:#fff;
+        text-align: center;
+        font-family: 'Monoton', cursive;
+        .title {
+            font-size:3.2rem;
+        }
+    }
+    main {
+        .game-board {
+            width:300px;
+            height:300px;
+            border:6px solid $blugrn-drk;
+            padding:0 !important;
+            display:grid;
+            grid-template-columns: 32.45% 32.45% 32.45%;
+            grid-template-rows: 32.45% 32.45% 32.45%;
+            box-shadow: 2px 2px 5px rgb(54, 53, 53);
+            grid-gap: 0.3rem;
+            background-color:$blugrn-drk;
+            .cell{
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $blugrn;
+                font-family: 'Monoton', cursive;
+                .fa-x {
+                    font-size:3.2rem;
+                    font-weight: bold;
+                    color:black;
+                }
+                .fa-o {
+                    font-size:3.5rem;
+                    font-weight: bold;
+                    color:#fff;
+                }
+                &:hover {
+                    background-color: $blugrn-lgt;
+                    cursor:pointer;
+                }
+            }
+        }
+        .turn {
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+            font-size:2rem;
+            .turn-sign{
+                font-size:2.5rem;
+                vertical-align: middle;
+            }
+        }
+        .wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .button-container {
+            text-align: center;
+            #play-game {
+                padding:0.8rem 1.4rem;
+                width:250px;
+                border-radius:0.6rem;
+                border:1px solid $text;
+                background-color:$blugrn-drk;
+                font-size:1.5rem;
+                font-weight: bold;
+                color:#fff;
+                animation:pulse 3s infinite;
+                @keyframes pulse {
+                    0% {
+                    box-shadow: 0 0 0 0 #fff;
+                }
+                50% {
+                box-shadow: 0 0 0 15px #d1e5f5;
+                }
+                100% {
+                    box-shadow: 0 0 0 0 #fff;
+                }
+                }
+            }
+        }
+        .game-status {
+            background-color:#212121;
+            text-align: center;
+            padding:0.8rem 1.4rem;
+            border-radius: 0.6rem;
+            .status {
+                text-transform: uppercase;
+                font-family: 'Wallpoet', cursive;
+                font-size: 2.5rem;
+                font-weight: bolder;
+            }
+            h2,h3 {
+                color:#fff;
+                font-weight: bold;
+            }
+        }
+    }
+    
+}
+
+footer {
+    .developer-section {
+        font-family: 'Montserrat','san-serif';
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:0.5rem 1rem 0 1rem;
+        color:#fff;
+        background-color: $blugrn-drk;
+    }
+}
